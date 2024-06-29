@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		31E8C4A1D309E251E6B9B82E /* libPods-WeatherApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 158134E4E11743D4AF82E027 /* libPods-WeatherApp.a */; };
+		602494892C2F333E00F312B6 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 602494882C2F333E00F312B6 /* LocationManager.swift */; };
 		60C096F02C2859B5007DC5AF /* WeatherAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C096EF2C2859B5007DC5AF /* WeatherAppApp.swift */; };
 		60C096F22C2859B5007DC5AF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60C096F12C2859B5007DC5AF /* ContentView.swift */; };
 		60C096F42C2859B7007DC5AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60C096F32C2859B7007DC5AF /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 
 /* Begin PBXFileReference section */
 		158134E4E11743D4AF82E027 /* libPods-WeatherApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WeatherApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		602494882C2F333E00F312B6 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		60C096EC2C2859B5007DC5AF /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60C096EF2C2859B5007DC5AF /* WeatherAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAppApp.swift; sourceTree = "<group>"; };
 		60C096F12C2859B5007DC5AF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -43,6 +45,14 @@
 				158134E4E11743D4AF82E027 /* libPods-WeatherApp.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		602494872C2F332700F312B6 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				602494882C2F333E00F312B6 /* LocationManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		60C096E32C2859B5007DC5AF = {
@@ -85,6 +95,7 @@
 		60C096FD2C29EDAA007DC5AF /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				602494872C2F332700F312B6 /* Managers */,
 				60C096EF2C2859B5007DC5AF /* WeatherAppApp.swift */,
 			);
 			path = Core;
@@ -104,7 +115,6 @@
 				F40AC3C401AD571C95A15AAF /* Pods-WeatherApp.debug.xcconfig */,
 				636DDCC164F28F3590C7859A /* Pods-WeatherApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -224,6 +234,7 @@
 			files = (
 				60C096F22C2859B5007DC5AF /* ContentView.swift in Sources */,
 				60C096F02C2859B5007DC5AF /* WeatherAppApp.swift in Sources */,
+				602494892C2F333E00F312B6 /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,7 +371,10 @@
 				DEVELOPMENT_ASSET_PATHS = "\"WeatherApp/Preview Content\"";
 				DEVELOPMENT_TEAM = 67VN4YZA79;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app need your location to provide best feature based on location";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -390,7 +404,10 @@
 				DEVELOPMENT_ASSET_PATHS = "\"WeatherApp/Preview Content\"";
 				DEVELOPMENT_TEAM = 67VN4YZA79;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app need your location to provide best feature based on location";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
