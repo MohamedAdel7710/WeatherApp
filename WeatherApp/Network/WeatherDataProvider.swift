@@ -8,7 +8,7 @@
 import Foundation
 import Moya
 
-protocol WeatherDataProtocol {
+protocol WeatherDataUseCase {
     func getCurrentWeather(lat: String, lon: String)
 }
 
@@ -22,7 +22,7 @@ final class WeatherDataProvider {
     }
     
     func getCurrentWeather(lat: String, lon: String) {
-        moyaProvider.request(MultiTarget(WeatherAPI.getCurrentLocationWeather(lat: lat, lon: lon))) { result in
+        moyaProvider.request(MultiTarget(WeatherEndpoint.getCurrentLocationWeather(lat: lat, lon: lon))) { result in
             switch result {
             case .success(let response):
                 do {

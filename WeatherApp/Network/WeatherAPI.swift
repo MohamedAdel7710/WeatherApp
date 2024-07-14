@@ -8,10 +8,10 @@
 import Foundation
 import Moya
 
-enum WeatherAPI {
+enum WeatherEndpoint {
     case getCurrentLocationWeather(lat: String, lon: String)
 }
-extension WeatherAPI: TargetType {
+extension WeatherEndpoint: TargetType {
     var baseURL: URL {
         guard let url = URL(string: AppConstants.NetworkConstants.baseURL) else {
             fatalError()
