@@ -34,4 +34,15 @@ final class LocationManager: NSObject, CLLocationManagerDelegate, ObservableObje
         isLoading = false
     }
     
+    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        switch manager.authorizationStatus {
+        case .restricted, .denied, .notDetermined:
+            manager.requestWhenInUseAuthorization()
+        case .authorizedAlways, .authorizedWhenInUse:
+            manager.requestLocation()
+        @unknown default:
+            manager.requestLocation()
+        }
+    }
+    
 }
