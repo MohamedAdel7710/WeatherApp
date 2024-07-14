@@ -46,3 +46,7 @@ struct WeatherResponse: Codable {
         case cityName = "name"
     }
 }
+
+extension WeatherResponse {
+    public static var previewData: WeatherResponse = StubsReader.loadData(from: AppConstants.ResponseStubNames.weather.rawValue)
+}

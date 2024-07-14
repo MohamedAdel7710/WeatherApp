@@ -44,6 +44,13 @@ extension WeatherAPI: TargetType {
         }
     }
     
+    var sampleData: Data {
+        switch self {
+        case .getCurrentLocationWeather:
+            StubsReader.readData(from: AppConstants.ResponseStubNames.weather.rawValue)
+        }
+    }
+    
     var headers: [String : String]? {
         [:]
     }
