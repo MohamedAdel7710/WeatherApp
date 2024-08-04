@@ -33,17 +33,32 @@ struct WeatherResponse: Codable {
             case humidity
         }
     }
+    struct SystemResponse: Codable {
+        let country: String
+        let sunrise: Int
+        let sunset: Int
+        let id: Int
+        
+        enum CodingKeys: String, CodingKey {
+            case country
+            case sunrise
+            case sunset
+            case id
+        }
+    }
     
     let coordinate: Coordinate
     let weather: [Weather]
     let main: MainResponse
     let cityName: String
+    let systemResponse: SystemResponse
     
     enum CodingKeys: String, CodingKey {
         case coordinate = "coord"
         case weather
         case main
         case cityName = "name"
+        case systemResponse = "sys"
     }
 }
 
